@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #1a365d;
+  --secondary: #e53e3e;
+  --accent: #f7931e;
+  --dark: #2d3748;
+  --light: #f7fafc;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #ffffff;
+  color: #2d3748;
+  line-height: 1.6;
+}
+
+.btn-primary {
+  @apply bg-red-600 text-white px-8 py-4 font-semibold hover:bg-red-700 transition-all duration-300 uppercase tracking-wider;
+}
+
+.btn-secondary {
+  @apply border-2 border-red-600 text-red-600 px-8 py-4 font-semibold hover:bg-red-600 hover:text-white transition-all duration-300 uppercase tracking-wider;
+}
+
+.section-padding {
+  @apply py-16 px-4 sm:px-6 lg:px-8;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(26, 54, 93, 0.9) 0%, rgba(45, 55, 72, 0.9) 100%);
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6;
+}
+
+.section-subtitle {
+  @apply text-lg md:text-xl text-gray-600 mb-12;
+}
+
+.professional-card {
+  @apply bg-white shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100;
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
