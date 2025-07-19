@@ -1,4 +1,4 @@
-import { Users, Award, Clock, Target, CheckCircle } from 'lucide-react';
+import { Users, Award, Clock, CheckCircle } from 'lucide-react';
 
 export default function About() {
   const stats = [
