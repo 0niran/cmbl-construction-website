@@ -31,7 +31,6 @@ cmbl-website/
 │       ├── Hero.tsx             # Hero section with company stats
 │       ├── About.tsx            # About section with credentials
 │       ├── Services.tsx         # Services grid with professional cards
-│       ├── Contact.tsx          # Contact information and CTA
 │       └── Footer.tsx           # Footer with company info
 ├── public/                      # Static assets
 ├── README.md                    # Project documentation

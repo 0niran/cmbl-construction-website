@@ -84,12 +84,12 @@ export default function Hero() {
                     <div className="text-sm text-gray-300 uppercase tracking-wider">Client Satisfaction</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-red-500 mb-2">5+</div>
+                    <div className="text-4xl font-bold text-red-500 mb-2">20+</div>
                     <div className="text-sm text-gray-300 uppercase tracking-wider">Years Experience</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-red-500 mb-2">24/7</div>
-                    <div className="text-sm text-gray-300 uppercase tracking-wider">Support</div>
+                    <div className="text-4xl font-bold text-red-500 mb-2">✓</div>
+                    <div className="text-sm text-gray-300 uppercase tracking-wider">Licensed</div>
                   </div>
                 </div>
                 

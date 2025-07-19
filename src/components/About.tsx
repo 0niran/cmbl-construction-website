@@ -4,8 +4,7 @@ export default function About() {
   const stats = [
     { icon: <Users className="h-6 w-6" />, value: "50+", label: "Projects Completed" },
     { icon: <Award className="h-6 w-6" />, value: "100%", label: "Client Satisfaction" },
-    { icon: <Clock className="h-6 w-6" />, value: "5+", label: "Years Experience" },
-    { icon: <Target className="h-6 w-6" />, value: "24/7", label: "Support Available" }
+    { icon: <Clock className="h-6 w-6" />, value: "20+", label: "Years Experience" }
   ];
 
   const values = [
@@ -75,20 +74,22 @@ export default function About() {
             </div>
           </div>
           
-          {/* Stats */}
+          {/* Company Credentials */}
           <div className="bg-gray-50 rounded-2xl p-8">
-            <h4 className="text-2xl font-bold text-gray-900 mb-8 text-center">Our Track Record</h4>
-            <div className="grid grid-cols-2 gap-6">
+            <h4 className="text-2xl font-bold text-gray-900 mb-8 text-center">Company Credentials</h4>
+            <div className="grid grid-cols-1 gap-6">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-12 h-12 bg-red-600 text-white rounded-lg flex items-center justify-center mx-auto mb-3">
+                <div key={index} className="flex items-center justify-center">
+                  <div className="w-12 h-12 bg-red-600 text-white rounded-lg flex items-center justify-center mr-4">
                     {stat.icon}
                   </div>
-                  <div className="text-3xl font-bold text-gray-900 mb-1">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-gray-600 font-medium">
-                    {stat.label}
+                  <div className="text-left">
+                    <div className="text-2xl font-bold text-gray-900">
+                      {stat.value}
+                    </div>
+                    <div className="text-sm text-gray-600 font-medium">
+                      {stat.label}
+                    </div>
                   </div>
                 </div>
               ))}
