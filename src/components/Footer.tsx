@@ -48,17 +48,9 @@ export default function Footer() {
               <li><a href="#home" className="text-gray-300 hover:text-white transition-colors text-sm">Home</a></li>
               <li><a href="#about" className="text-gray-300 hover:text-white transition-colors text-sm">About Us</a></li>
               <li><a href="#services" className="text-gray-300 hover:text-white transition-colors text-sm">Services</a></li>
-              <li><a href="#contact" className="text-gray-300 hover:text-white transition-colors text-sm">Contact</a></li>
+              <li><a href="tel:+234-856-849-8752" className="text-gray-300 hover:text-white transition-colors text-sm">Contact</a></li>
             </ul>
             
-            <div className="mt-8">
-              <h5 className="text-sm font-semibold mb-3 text-white">Business Hours</h5>
-              <div className="text-sm text-gray-300 space-y-1">
-                <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
-                <p>Saturday: 9:00 AM - 4:00 PM</p>
-                <p>Sunday: Closed</p>
-              </div>
-            </div>
           </div>
         </div>
 

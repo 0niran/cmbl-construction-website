@@ -66,7 +66,6 @@ src/
     ├── Hero.tsx             # Hero with company stats
     ├── About.tsx            # Company credentials
     ├── Services.tsx         # Service offerings grid
-    ├── Contact.tsx          # Contact information
     └── Footer.tsx           # Company footer
 ```
 

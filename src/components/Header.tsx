@@ -10,7 +10,6 @@ export default function Header() {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Services', href: '#services' },
-    { name: 'Contact', href: '#contact' },
   ];
 
   return (
@@ -40,23 +39,6 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Contact Info & CTA */}
-          <div className="hidden lg:flex items-center space-x-6">
-            <a 
-              href="tel:+234-856-849-8752"
-              className="flex items-center text-gray-600 hover:text-red-600 transition-colors"
-            >
-              <Phone className="h-4 w-4 mr-2" />
-              <span className="text-sm font-medium">+234-856-849-8752</span>
-            </a>
-            <a
-              href="#contact"
-              className="bg-red-600 text-white px-6 py-2 text-sm font-semibold hover:bg-red-700 transition-colors uppercase tracking-wider"
-            >
-              Get Quote
-            </a>
-          </div>
-
           {/* Mobile menu button */}
           <button
             className="md:hidden p-2"
@@ -84,21 +66,6 @@ export default function Header() {
                   {item.name}
                 </a>
               ))}
-              <div className="pt-4 border-t border-gray-100 mt-4">
-                <a
-                  href="tel:+234-856-849-8752"
-                  className="block px-3 py-2 text-sm text-gray-600"
-                >
-                  📞 +234-856-849-8752
-                </a>
-                <a
-                  href="#contact"
-                  className="block px-3 py-2 text-center bg-red-600 text-white font-semibold hover:bg-red-700 mt-2 uppercase tracking-wider"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Get Quote
-                </a>
-              </div>
             </div>
           </div>
         )}
