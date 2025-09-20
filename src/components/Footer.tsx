@@ -1,4 +1,5 @@
 import { Phone, Mail } from 'lucide-react';
+import { CONTACT_INFO } from '@/lib/constants';
 
 export default function Footer() {
   return (
@@ -17,13 +18,13 @@ export default function Footer() {
               commercial projects across Nigeria.
             </p>
             <div className="flex flex-col space-y-3">
-              <a href="tel:+234-856-849-8752" className="flex items-center text-gray-300 hover:text-white transition-colors">
+              <a href={`tel:${CONTACT_INFO.phone}`} className="flex items-center text-gray-300 hover:text-white transition-colors">
                 <Phone className="h-4 w-4 mr-2" />
-                +234-856-849-8752
+                {CONTACT_INFO.phone}
               </a>
-              <a href="mailto:info@cmbl.cc" className="flex items-center text-gray-300 hover:text-white transition-colors">
+              <a href={`mailto:${CONTACT_INFO.email}`} className="flex items-center text-gray-300 hover:text-white transition-colors">
                 <Mail className="h-4 w-4 mr-2" />
-                info@cmbl.cc
+                {CONTACT_INFO.email}
               </a>
             </div>
           </div>
@@ -48,7 +49,7 @@ export default function Footer() {
               <li><a href="#home" className="text-gray-300 hover:text-white transition-colors text-sm">Home</a></li>
               <li><a href="#about" className="text-gray-300 hover:text-white transition-colors text-sm">About Us</a></li>
               <li><a href="#services" className="text-gray-300 hover:text-white transition-colors text-sm">Services</a></li>
-              <li><a href="tel:+234-856-849-8752" className="text-gray-300 hover:text-white transition-colors text-sm">Contact</a></li>
+              <li><a href={`tel:${CONTACT_INFO.phone}`} className="text-gray-300 hover:text-white transition-colors text-sm">Contact</a></li>
             </ul>
             
           </div>

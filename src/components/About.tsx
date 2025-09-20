@@ -1,45 +1,23 @@
 import { Users, Award, Clock, CheckCircle } from 'lucide-react';
+import { COMPANY_STATS, COMPANY_VALUES } from '@/lib/constants';
+import SectionHeader from '@/components/ui/SectionHeader';
 
 export default function About() {
-  const stats = [
-    { icon: <Users className="h-6 w-6" />, value: "50+", label: "Projects Completed" },
-    { icon: <Award className="h-6 w-6" />, value: "100%", label: "Client Satisfaction" },
-    { icon: <Clock className="h-6 w-6" />, value: "20+", label: "Years Experience" }
-  ];
-
-  const values = [
-    {
-      title: "Quality Excellence",
-      description: "We maintain the highest standards in every project, ensuring superior craftsmanship and attention to detail in all our construction work."
-    },
-    {
-      title: "Professional Service", 
-      description: "Our experienced team provides professional construction services with transparent communication and dedicated project management throughout."
-    },
-    {
-      title: "Timely Delivery",
-      description: "We respect deadlines and deliver projects on time without compromising on quality, safety standards, or client expectations."
-    },
-    {
-      title: "Customer Focus",
-      description: "Client satisfaction is our top priority. We work closely with you to understand your vision and bring it to life with excellence."
-    }
+  const statsWithIcons = [
+    { icon: <Users className="h-6 w-6" />, ...COMPANY_STATS[0] },
+    { icon: <Award className="h-6 w-6" />, ...COMPANY_STATS[1] },
+    { icon: <Clock className="h-6 w-6" />, ...COMPANY_STATS[2] }
   ];
 
   return (
     <section id="about" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-block bg-red-600 text-white px-6 py-2 rounded-full mb-6">
-            <span className="font-semibold text-sm uppercase tracking-wider">About Us</span>
-          </div>
-          <h2 className="section-title">About CMBL Construction</h2>
-          <p className="section-subtitle max-w-4xl mx-auto">
-            CMBL Construction is a leading construction company dedicated to delivering exceptional 
-            construction services across Nigeria with years of expertise and unwavering commitment to excellence.
-          </p>
-        </div>
+        <SectionHeader
+          badge="About Us"
+          title="About CMBL Construction"
+          subtitle="CMBL Construction is a leading construction company dedicated to delivering exceptional construction services across Nigeria with years of expertise and unwavering commitment to excellence."
+          maxWidth="max-w-4xl"
+        />
 
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
@@ -78,7 +56,7 @@ export default function About() {
           <div className="bg-gray-50 rounded-2xl p-8">
             <h4 className="text-2xl font-bold text-gray-900 mb-8 text-center">Company Credentials</h4>
             <div className="grid grid-cols-1 gap-6">
-              {stats.map((stat, index) => (
+              {statsWithIcons.map((stat, index) => (
                 <div key={index} className="flex items-center justify-center">
                   <div className="w-12 h-12 bg-red-600 text-white rounded-lg flex items-center justify-center mr-4">
                     {stat.icon}
@@ -126,7 +104,7 @@ export default function About() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {values.map((value, index) => (
+            {COMPANY_VALUES.map((value, index) => (
               <div key={index} className="professional-card p-6">
                 <h4 className="text-xl font-bold text-gray-900 mb-3">
                   {value.title}

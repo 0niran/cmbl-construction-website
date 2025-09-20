@@ -1,63 +1,34 @@
 import { Building, Home, Wrench, Paintbrush, TreePine, ShieldCheck } from 'lucide-react';
+import { SERVICES, CONTACT_INFO } from '@/lib/constants';
+import SectionHeader from '@/components/ui/SectionHeader';
 
 export default function Services() {
-  const services = [
-    {
-      icon: <Building className="h-8 w-8" />,
-      title: "Commercial Construction",
-      description: "Office buildings, retail spaces, warehouses, and commercial complexes built to the highest standards with professional project management.",
-      features: ["Project Management", "Quality Assurance", "Timely Delivery", "Budget Control"]
-    },
-    {
-      icon: <Home className="h-8 w-8" />,
-      title: "Residential Construction",
-      description: "Custom homes, renovations, and residential developments designed for modern living with attention to detail and quality craftsmanship.",
-      features: ["Custom Design", "Quality Materials", "Professional Finish", "Client Collaboration"]
-    },
-    {
-      icon: <Wrench className="h-8 w-8" />,
-      title: "Civil Engineering",
-      description: "Infrastructure development, road construction, and comprehensive civil engineering solutions for long-lasting structural integrity.",
-      features: ["Site Planning", "Infrastructure Design", "Engineering Analysis", "Regulatory Compliance"]
-    },
-    {
-      icon: <Paintbrush className="h-8 w-8" />,
-      title: "Renovation & Remodeling",
-      description: "Transform existing spaces with our comprehensive renovation and remodeling services that breathe new life into your property.",
-      features: ["Interior Design", "Structural Updates", "Modern Upgrades", "Space Optimization"]
-    },
-    {
-      icon: <TreePine className="h-8 w-8" />,
-      title: "Landscaping",
-      description: "Beautiful outdoor spaces and professional landscaping solutions for both residential and commercial properties.",
-      features: ["Garden Design", "Hardscaping", "Maintenance Plans", "Sustainable Solutions"]
-    },
-    {
-      icon: <ShieldCheck className="h-8 w-8" />,
-      title: "Project Consultation",
-      description: "Expert consultation services for construction planning, budgeting, and comprehensive project management from start to finish.",
-      features: ["Cost Estimation", "Planning Services", "Risk Assessment", "Technical Guidance"]
-    }
+  const serviceIcons = [
+    <Building key="building" className="h-8 w-8" />,
+    <Home key="home" className="h-8 w-8" />,
+    <Wrench key="wrench" className="h-8 w-8" />,
+    <Paintbrush key="paintbrush" className="h-8 w-8" />,
+    <TreePine key="treepine" className="h-8 w-8" />,
+    <ShieldCheck key="shieldcheck" className="h-8 w-8" />
   ];
+
+  const servicesWithIcons = SERVICES.map((service, index) => ({
+    ...service,
+    icon: serviceIcons[index]
+  }));
 
   return (
     <section id="services" className="section-padding bg-gray-50">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-block bg-red-600 text-white px-6 py-2 rounded-full mb-6">
-            <span className="font-semibold text-sm uppercase tracking-wider">Our Services</span>
-          </div>
-          <h2 className="section-title">Professional Construction Services</h2>
-          <p className="section-subtitle max-w-3xl mx-auto">
-            CMBL Construction delivers comprehensive construction solutions with professional expertise, 
-            quality craftsmanship, and proven project management for both residential and commercial clients.
-          </p>
-        </div>
+        <SectionHeader
+          badge="Our Services"
+          title="Professional Construction Services"
+          subtitle="CMBL Construction delivers comprehensive construction solutions with professional expertise, quality craftsmanship, and proven project management for both residential and commercial clients."
+        />
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => (
+          {servicesWithIcons.map((service, index) => (
             <div key={index} className="professional-card p-8 h-full">
               {/* Icon */}
               <div className="w-16 h-16 bg-red-600 text-white rounded-lg flex items-center justify-center mb-6">
@@ -100,8 +71,8 @@ export default function Services() {
               <a href="#contact" className="btn-primary">
                 Get Started Today
               </a>
-              <a href="tel:+234-856-849-8752" className="btn-secondary">
-                Call +234-856-849-8752
+              <a href={`tel:${CONTACT_INFO.phone}`} className="btn-secondary">
+                Call {CONTACT_INFO.phone}
               </a>
             </div>
           </div>

@@ -2,15 +2,10 @@
 
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { NAVIGATION_LINKS } from '@/lib/constants';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const navigation = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-  ];
 
   return (
     <header className="bg-white shadow-sm fixed top-0 w-full z-50 border-b border-gray-100">
@@ -28,7 +23,7 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
+            {NAVIGATION_LINKS.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
@@ -56,7 +51,7 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-100">
-              {navigation.map((item) => (
+              {NAVIGATION_LINKS.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}

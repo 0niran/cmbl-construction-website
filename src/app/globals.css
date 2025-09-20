@@ -1,21 +1,11 @@
 @import "tailwindcss";
 
-:root {
-  --primary: #1a365d;
-  --secondary: #e53e3e;
-  --accent: #f7931e;
-  --dark: #2d3748;
-  --light: #f7fafc;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #ffffff;
-  color: #2d3748;
   line-height: 1.6;
 }
 
@@ -31,10 +21,6 @@ body {
   @apply py-16 px-4 sm:px-6 lg:px-8;
 }
 
-.hero-gradient {
-  background: linear-gradient(135deg, rgba(26, 54, 93, 0.9) 0%, rgba(45, 55, 72, 0.9) 100%);
-}
-
 .section-title {
   @apply text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6;
 }
@@ -45,28 +31,4 @@ body {
 
 .professional-card {
   @apply bg-white shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100;
-}
-
-.text-primary {
-  color: var(--primary);
-}
-
-.text-secondary {
-  color: var(--secondary);
-}
-
-.text-accent {
-  color: var(--accent);
-}
-
-.bg-primary {
-  background-color: var(--primary);
-}
-
-.bg-secondary {
-  background-color: var(--secondary);
-}
-
-.bg-accent {
-  background-color: var(--accent);
 }

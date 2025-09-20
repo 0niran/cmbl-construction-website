@@ -1,4 +1,5 @@
 import { Building2, Phone, Mail, ArrowRight } from 'lucide-react';
+import { CONTACT_INFO, COMPANY_STATS } from '@/lib/constants';
 
 export default function Hero() {
   return (
@@ -53,18 +54,18 @@ export default function Hero() {
               {/* Quick Contact */}
               <div className="flex flex-col sm:flex-row gap-6 text-gray-300">
                 <a 
-                  href="tel:+234-856-849-8752" 
+                  href={`tel:${CONTACT_INFO.phone}`} 
                   className="flex items-center hover:text-white transition-colors group"
                 >
                   <Phone className="h-5 w-5 mr-3 text-red-500 group-hover:scale-110 transition-transform" />
-                  <span className="font-medium">+234-856-849-8752</span>
+                  <span className="font-medium">{CONTACT_INFO.phone}</span>
                 </a>
                 <a 
-                  href="mailto:info@cmbl.cc" 
+                  href={`mailto:${CONTACT_INFO.email}`} 
                   className="flex items-center hover:text-white transition-colors group"
                 >
                   <Mail className="h-5 w-5 mr-3 text-red-500 group-hover:scale-110 transition-transform" />
-                  <span className="font-medium">info@cmbl.cc</span>
+                  <span className="font-medium">{CONTACT_INFO.email}</span>
                 </a>
               </div>
             </div>
@@ -75,18 +76,12 @@ export default function Hero() {
                 <h3 className="text-2xl font-bold mb-8 text-center">Why Choose CMBL?</h3>
                 
                 <div className="grid grid-cols-2 gap-6">
-                  <div className="text-center">
-                    <div className="text-4xl font-bold text-red-500 mb-2">50+</div>
-                    <div className="text-sm text-gray-300 uppercase tracking-wider">Projects Completed</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-4xl font-bold text-red-500 mb-2">100%</div>
-                    <div className="text-sm text-gray-300 uppercase tracking-wider">Client Satisfaction</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-4xl font-bold text-red-500 mb-2">20+</div>
-                    <div className="text-sm text-gray-300 uppercase tracking-wider">Years Experience</div>
-                  </div>
+                  {COMPANY_STATS.map((stat, index) => (
+                    <div key={index} className="text-center">
+                      <div className="text-4xl font-bold text-red-500 mb-2">{stat.value}</div>
+                      <div className="text-sm text-gray-300 uppercase tracking-wider">{stat.label}</div>
+                    </div>
+                  ))}
                   <div className="text-center">
                     <div className="text-4xl font-bold text-red-500 mb-2">✓</div>
                     <div className="text-sm text-gray-300 uppercase tracking-wider">Licensed</div>
